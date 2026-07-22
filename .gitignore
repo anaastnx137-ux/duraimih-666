@@ -1,0 +1,19 @@
+node_modules/
+backend/node_modules/
+backend/dist/
+public/dist/
+backend/.env
+.env
+
+backend/uploads/
+storage/backups/
+storage/uploads/
+uploads/
+scratch/
+postgresql/
+
+*.log
+.DS_Store
+Thumbs.db
+postgresql.zip
+draymih - Copy (2)/

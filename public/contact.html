@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/logo-dark.png">
+    <title>طلب استشارة - مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والإستشارات القانونية</title>
+    <meta name="description" content="اتصل بنا وحلّل تفاصيل قضيتك عبر نموذج حجز استشارة قانونية ذكي لخدمات المحاماة والاستشارات القانونية في المملكة العربية السعودية.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="استشارة قانونية, محامي الرياض, تواصل مكتب محاماة, طلب استشارة, مكتب د. سعود الدريميح">
+    <link rel="canonical" href="https://alduraymih-law.sa/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="طلب استشارة قانونية - مكتب د. سعود الدريميح">
+    <meta property="og:url" content="https://alduraymih-law.sa/contact.html">
+    <meta property="og:locale" content="ar_SA">
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Islamic Pattern Background Overlay -->
+    <div class="islamic-pattern-overlay"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <h1 style="margin: 0; padding: 0; font-size: inherit; font-weight: inherit; line-height: inherit; display: inline-flex; align-items: center;">
+                    <span class="sr-only" data-i18n="logo_title">مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والإستشارات القانونية</span>
+                    <img id="logo-img" src="logo-dark.png" alt="شعار مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والإستشارات القانونية" style="height: 45px; width: auto; object-fit: contain; display: block; transition: var(--transition-premium);">
+                </h1>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="index.html#about" class="nav-link" data-i18n="nav_about">عن المكتب</a>
+                <a href="services.html" class="nav-link" data-i18n="nav_services">خدماتنا</a>
+                <a href="blog.html" class="nav-link" data-i18n="nav_blog">المدونة</a>
+                <a href="contact.html" class="nav-link active" data-i18n="nav_contact">اتصل بنا</a>
+            </nav>
+
+            <div class="header-ctas">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle-btn" class="lang-toggle-btn" aria-label="Toggle language">
+                    <span>EN</span>
+                </button>
+                <a href="contact.html" class="btn btn-primary">
+                    <span data-i18n="btn_consultation">طلب استشارة</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Side Menu Panel -->
+    <div id="mobile-menu-panel" class="mobile-menu-panel glass-panel">
+        <div class="mobile-menu-header">
+            <span class="gold-symbol">⚖</span>
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_home">الرئيسية</a>
+            <a href="index.html#about" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_about">عن المكتب</a>
+            <a href="services.html" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_services">خدماتنا</a>
+            <a href="blog.html" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_blog">المدونة</a>
+            <a href="contact.html" class="mobile-menu-link active" onclick="toggleMobileMenu()" data-i18n="nav_contact">اتصل بنا</a>
+        </nav>
+    </div>
+
+    <!-- Contact Page Container -->
+    <main class="contact-page-wrapper">
+        <div class="contact-card-premium glass-panel">
+            <div class="contact-card-header">
+                <span style="font-size: 2.5rem; color: var(--color-gold);">⚖</span>
+                <h2 class="amiri-font" data-i18n="modal_title">احجز استشارتك القانونية</h2>
+                <p data-i18n="contact_page_subtitle">يرجى تعبئة النموذج خطوة بخطوة للبدء في معالجة طلبك بدقة وسرعة</p>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="progress-bar-wrapper">
+                <div class="progress-steps">
+                    <span class="step-indicator active" id="step-ind-1">١</span>
+                    <span class="step-line"></span>
+                    <span class="step-indicator" id="step-ind-2">٢</span>
+                    <span class="step-line"></span>
+                    <span class="step-indicator" id="step-ind-3">٣</span>
+                </div>
+                <div class="progress-text"><span data-i18n="contact_page_step">الخطوة</span> <span id="current-step-num">١</span> <span data-i18n="contact_page_of">من</span> ٣</div>
+            </div>
+
+            <!-- Multi-step Form -->
+            <form id="multistep-consultation-form" onsubmit="handleFormSubmit(event)">
+                <!-- Honeypot field for anti-spam protection -->
+                <div style="display: none;" aria-hidden="true">
+                    <input type="text" id="contact-website" name="website_field" tabindex="-1" autocomplete="off">
+                </div>
+                <!-- Step 1: Personal Info -->
+                <div class="form-step active" id="step-1">
+                    <h3 class="step-title amiri-font" data-i18n="contact_page_step1_title">١. البيانات الشخصية للاتصال</h3>
+                    <div class="form-group">
+                        <label for="name" data-i18n="form_name_label">الاسم الكامل</label>
+                        <input type="text" id="name" required data-i18n-placeholder="modal_name_placeholder" placeholder="مثال: د. سعود بن فهد الدريميح">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" data-i18n="form_phone_label">رقم الجوال (السعودي)</label>
+                        <input type="tel" id="phone" required data-i18n-placeholder="modal_phone_placeholder" placeholder="05xxxxxxxx" pattern="^05\d{8}$" title="يرجى إدخال رقم جوال سعودي يبدأ بـ 05 ويتكون من 10 أرقام">
+                    </div>
+                </div>
+
+                <!-- Step 2: Case/Request Specialty -->
+                <div class="form-step" id="step-2">
+                    <h3 class="step-title amiri-font" data-i18n="contact_page_step2_title">٢. نوع الخدمة والاستشارة</h3>
+                    <div class="form-group">
+                        <label for="case-type" data-i18n="modal_service_label">نوع القضية أو التخصص المطلوب</label>
+                        <select id="case-type" required>
+                            <option value="" disabled selected data-i18n="modal_service_placeholder">اختر الخدمة أو مجال التخصص</option>
+                            <option value="commercial" data-i18n="modal_service_opt1">المحاماة والقضاء التجاري والشركات</option>
+                            <option value="labor" data-i18n="modal_service_opt5">المنازعات العمالية وحقوق الموظفين</option>
+                            <option value="arbitration" data-i18n="modal_service_opt2">التحكيم التجاري وتسوية النزاعات</option>
+                            <option value="documentation" data-i18n="modal_service_opt3">التوثيق الفوري وإفراغ العقارات وصياغة العقود</option>
+                            <option value="other" data-i18n="modal_service_opt5">استشارة قانونية أخرى</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Step 3: Description & Urgency Level -->
+                <div class="form-step" id="step-3">
+                    <h3 class="step-title amiri-font" data-i18n="contact_page_step3_title">٣. شرح التفاصيل ومستوى الاستعجال</h3>
+                    <div class="form-group">
+                        <label for="description" data-i18n="modal_desc_label">لمحة مختصرة عن موضوع الاستشارة</label>
+                        <textarea id="description" rows="4" required data-i18n-placeholder="modal_desc_placeholder" placeholder="يرجى صياغة موضوع الاستفسار أو القضية لمراجعتها بدقة"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="contact_page_urgency_label">درجة الاستعجال والطلب</label>
+                        <div class="urgency-options">
+                            <label class="urgency-label">
+                                <input type="radio" name="urgency" value="normal" checked>
+                                <span class="urgency-box urgency-normal" data-i18n="contact_page_urg_low">عادي (مراجعة خلال ٢٤ ساعة عمل)</span>
+                            </label>
+                            <label class="urgency-label">
+                                <input type="radio" name="urgency" value="urgent">
+                                <span class="urgency-box urgency-urgent" data-i18n="contact_page_urg_medium">مستعجل (دراسة سريعة خلال ١٢ ساعة)</span>
+                            </label>
+                            <label class="urgency-label">
+                                <input type="radio" name="urgency" value="emergency">
+                                <span class="urgency-box urgency-emergency" data-i18n="contact_page_urg_high">طارئ (اتصال هاتفي ومتابعة واتساب فورية)</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <!-- Premium Supporting Documents Attachment Component -->
+                    <div class="form-group" style="margin-top: 2rem;">
+                        <label data-i18n="upload_label" style="font-weight: 700; display: block; margin-bottom: 0.75rem; color: var(--color-green);">المرفقات والمستندات الداعمة (اختياري)</label>
+                        <div id="drop-zone" class="upload-drop-zone">
+                            <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                            <p class="upload-text">
+                                <span data-i18n="drag_drop_text">اسحب وأفلت الملفات هنا أو</span>
+                                <label for="file-input" class="file-browse-btn" data-i18n="browse_files">تصفح الملفات</label>
+                            </p>
+                            <input type="file" id="file-input" multiple accept=".pdf,.doc,.docx,.jpg,.jpeg,.png" style="display: none;">
+                            <p class="upload-hint" data-i18n="upload_limits">الحد الأقصى 5 ملفات. الحجم الأقصى للملف 10 ميجابايت. الحجم الكلي الأقصى 30 ميجابايت.</p>
+                        </div>
+                        <div id="file-error-msg" class="file-error-message" style="display: none;"></div>
+                        <div id="selected-files-list" class="selected-files-list"></div>
+                    </div>
+                </div>
+
+                <!-- Form Controls Navigation -->
+                <div class="form-nav">
+                    <button type="button" class="btn btn-secondary" id="prev-btn" onclick="changeStep(-1)" style="display: none; border: 1.5px solid rgba(68, 112, 75, 0.2); background: transparent; color: var(--color-green);" data-i18n="contact_page_btn_prev">السابق</button>
+                    <button type="button" class="btn btn-primary" id="next-btn" onclick="changeStep(1)" style="background-color: var(--color-gold) !important; border-color: var(--color-gold) !important;" data-i18n="contact_page_btn_next">التالي</button>
+                    <button type="submit" class="btn btn-primary btn-submit" id="submit-btn" style="display: none; background-color: var(--color-green) !important; border-color: var(--color-green) !important;" data-i18n="contact_page_btn_submit">إرسال الاستشارة</button>
+                </div>
+            </form>
+
+            <!-- Direct Quick Contact Buttons -->
+            <div class="direct-contact-actions">
+                <div class="direct-contact-title" data-i18n="form_quick_contact">أو تواصل معنا مباشرة عبر القنوات الفورية:</div>
+                <div class="direct-buttons-row">
+                    <a href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%87" target="_blank" class="btn btn-direct-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span data-i18n="form_whatsapp">مراسلة واتساب فورية</span>
+                    </a>
+                    <a href="tel:+966500000000" class="btn btn-direct-phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span data-i18n="form_call">اتصال هاتفي مباشر</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Footer -->
+            <footer class="sub-footer" style="margin-top: 5rem; padding-bottom: 2rem; border-top: 1px solid rgba(68, 112, 75, 0.08);">
+                <p data-i18n="copyright">© ٢٠٢٦ مكتب الدكتور سعود بن فهد الدريميح للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.</p>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span data-i18n="nav_home">الرئيسية</span>
+        </a>
+        <a href="blog.html" class="mobile-bottom-nav-item">
+            <i class="fa-solid fa-book-open"></i>
+            <span data-i18n="nav_blog">المدونة</span>
+        </a>
+        <a href="contact.html" class="mobile-bottom-nav-item active">
+            <i class="fa-solid fa-envelope"></i>
+            <span data-i18n="nav_contact">اتصل بنا</span>
+        </a>
+    </nav>
+
+    <!-- Floating Phone Button -->
+    <a href="tel:+966500000000" class="phone-float" aria-label="Phone Call Contact">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9" class="whatsapp-float" target="_blank" aria-label="WhatsApp Contact">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Toast Notification -->
+    <div id="toast-notification" class="toast glass-panel">
+        <div class="toast-content">
+            <i class="fa-solid fa-circle-check text-green" style="font-size: 1.5rem; margin-left: 10px;"></i>
+            <div class="toast-text">
+                <h4 id="toast-title" style="color: var(--color-green); font-weight: 700; margin-bottom: 2px;" data-i18n="toast_success_title">تم الإرسال بنجاح</h4>
+                <p id="toast-desc" style="font-size: 0.85rem; color: var(--color-text-light);" data-i18n="toast_success_desc">نشكرك على ثقتك، سنتواصل معك قريباً.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js" defer></script>
+    <script src="consultation-api.js" defer></script>
+    <script src="translations.js?v=13" defer></script>
+    <script src="app.js?v=13" defer></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../backend/node_modules/.prisma/client"
+}
+
+model Role {
+  id              Int              @id @default(autoincrement())
+  name            String           @unique // e.g. "Super Admin", "Admin", "Editor", "Reception"
+  description     String?          @db.Text
+  users           User[]
+  rolePermissions RolePermission[]
+}
+
+model Permission {
+  id              Int              @id @default(autoincrement())
+  name            String           @unique // e.g. "manage_blog", "view_consultations"
+  description     String?          @db.Text
+  rolePermissions RolePermission[]
+  userPermissions UserPermission[]
+}
+
+model RolePermission {
+  roleId       Int
+  permissionId Int
+  role         Role       @relation(fields: [roleId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([roleId, permissionId])
+}
+
+model User {
+  id                      Int                      @id @default(autoincrement())
+  roleId                  Int
+  role                    Role                     @relation(fields: [roleId], references: [id], onDelete: Restrict)
+  fullName                String
+  email                   String                   @unique
+  passwordHash            String
+  isActive                Boolean                  @default(true)
+  createdAt               DateTime                 @default(now())
+  updatedAt               DateTime                 @updatedAt
+  sessions                Session[]
+  blogArticles            BlogArticle[]
+  userPermissions         UserPermission[]
+  activityLogs            ActivityLog[]
+  notifications           Notification[]           @relation("UserNotifications")
+  assignedConsultations   Consultation[]           @relation("AssignedUser")
+  passwordResetTokens     PasswordResetToken[]
+  emailVerificationTokens EmailVerificationToken[]
+}
+
+model UserPermission {
+  userId       Int
+  permissionId Int
+  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  permission   Permission @relation(fields: [permissionId], references: [id], onDelete: Cascade)
+
+  @@id([userId, permissionId])
+}
+
+model Session {
+  id           String   @id @default(uuid())
+  userId       Int
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  refreshToken String   @unique @db.VarChar(512)
+  ipAddress    String?
+  userAgent    String?  @db.Text
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+}
+
+model Consultation {
+  id               Int                @id @default(autoincrement())
+  referenceNumber  String             @unique // e.g. "LAW-YYYYMMDD-XXXXXX"
+  fullName         String
+  phone            String
+  email            String?
+  company          String?
+  service          String?
+  message          String             @db.Text
+  language         String             @default("ar")
+  theme            String             @default("dark")
+  ipAddress        String?
+  browser          String?
+  device           String?
+  screenResolution String?
+  timezone         String?
+  pageUrl          String?            @db.Text
+  referrer         String?            @db.Text
+  status           String             @default("New") // "New", "In Review", "Scheduled", "Closed"
+  priority         String             @default("Normal") // "Normal", "Urgent", "Emergency"
+  assignedUserId   Int?
+  assignedUser     User?              @relation("AssignedUser", fields: [assignedUserId], references: [id], onDelete: SetNull)
+  notes            String?            @db.Text
+  createdAt        DateTime           @default(now())
+  updatedAt        DateTime           @updatedAt
+  files            ConsultationFile[]
+  statusHistory    StatusHistory[]
+}
+
+model ConsultationFile {
+  id             Int          @id @default(autoincrement())
+  consultationId Int
+  consultation   Consultation @relation(fields: [consultationId], references: [id], onDelete: Cascade)
+  fileName       String
+  filePath       String
+  fileSize       Int
+  mimeType       String
+  createdAt      DateTime     @default(now())
+}
+
+model StatusHistory {
+  id             Int          @id @default(autoincrement())
+  consultationId Int
+  consultation   Consultation @relation(fields: [consultationId], references: [id], onDelete: Cascade)
+  status         String
+  notes          String?      @db.Text
+  updatedBy      String
+  createdAt      DateTime     @default(now())
+}
+
+model BlogCategory {
+  id        Int           @id @default(autoincrement())
+  slug      String        @unique
+  nameAr    String
+  nameEn    String
+  createdAt DateTime      @default(now())
+  articles  BlogArticle[]
+}
+
+model BlogArticle {
+  id          Int           @id @default(autoincrement())
+  authorId    Int?
+  author      User?         @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  categoryId  Int?
+  category    BlogCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  slug        String        @unique
+  titleAr     String
+  titleEn     String
+  excerptAr   String        @db.Text
+  excerptEn   String        @db.Text
+  contentAr   String        @db.LongText
+  contentEn   String        @db.LongText
+  icon        String        @default("fa-scroll")
+  imagePath   String?
+  keywords    Json
+  tags        Json
+  readTimeAr  String?
+  readTimeEn  String?
+  status      String        @default("Draft") // "Draft", "Published"
+  isFeatured  Boolean       @default(false)
+  publishedAt DateTime?
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
+model Service {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique
+  titleAr       String
+  titleEn       String
+  descriptionAr String   @db.Text
+  descriptionEn String   @db.Text
+  icon          String   @default("fa-scale-balanced")
+  isActive      Boolean  @default(true)
+  orderIndex    Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Testimonial {
+  id           Int      @id @default(autoincrement())
+  clientNameAr String
+  clientNameEn String
+  companyAr    String?
+  companyEn    String?
+  contentAr    String   @db.Text
+  contentEn    String   @db.Text
+  rating       Int      @default(5)
+  isActive     Boolean  @default(true)
+  createdAt    DateTime @default(now())
+}
+
+model FAQ {
+  id         Int      @id @default(autoincrement())
+  questionAr String   @db.Text
+  questionEn String   @db.Text
+  answerAr   String   @db.Text
+  answerEn   String   @db.Text
+  isActive   Boolean  @default(true)
+  orderIndex Int      @default(0)
+  createdAt  DateTime @default(now())
+}
+
+model WebsiteSetting {
+  key         String   @id // e.g. "phone", "whatsapp"
+  value       String   @db.Text
+  description String?  @db.Text
+  updatedAt   DateTime @updatedAt
+}
+
+model Notification {
+  id        Int      @id @default(autoincrement())
+  titleAr   String
+  titleEn   String
+  messageAr String   @db.Text
+  messageEn String   @db.Text
+  type      String? // e.g. "new_consultation"
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+  userId    Int?
+  user      User?    @relation("UserNotifications", fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model ActivityLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String // e.g. "LOGIN", "LOGOUT", "CREATE_BLOG"
+  ipAddress String?
+  userAgent String?  @db.Text
+  oldValue  String?  @db.LongText
+  newValue  String?  @db.LongText
+  details   String?  @db.Text
+  createdAt DateTime @default(now())
+}
+
+model PasswordResetToken {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
+
+model EmailVerificationToken {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}

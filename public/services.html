@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/logo-dark.png">
+    <title data-i18n="services_page_title">خدماتنا القانونية - مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والإستشارات القانونية</title>
+    <meta name="description" content="تصفح كافة الخدمات القانونية المتخصصة التي يقدمها مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والاستشارات القانونية بالرياض والمملكة.">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="خدمات قانونية, تأسيس شركات, صياغة عقود, تحصيل ديون, حوكمة, محامي الرياض, مكتب د. سعود الدريميح">
+    <link rel="canonical" href="https://alduraymih-law.sa/services.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="الخدمات القانونية - مكتب د. سعود الدريميح">
+    <meta property="og:url" content="https://alduraymih-law.sa/services.html">
+    <meta property="og:locale" content="ar_SA">
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .services-page-wrapper {
+            position: relative;
+            z-index: 1;
+            min-height: 100vh;
+            padding: 120px 20px 80px 20px;
+            background-color: var(--color-dark);
+        }
+        .services-hero-section {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem auto;
+        }
+        .services-hero-section h2 {
+            font-size: 2.5rem;
+            color: var(--color-green);
+            margin-bottom: 0.75rem;
+        }
+        .services-hero-section p {
+            color: var(--color-text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        .categories-section {
+            margin-top: 6rem;
+        }
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        .category-card {
+            padding: 2.25rem 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            transition: var(--transition-premium);
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--glass-border-hover);
+            box-shadow: var(--glass-shadow-hover);
+        }
+        .category-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 1.5px dashed rgba(212, 175, 55, 0.25);
+            padding-bottom: 1rem;
+            margin-bottom: 1.25rem;
+        }
+        .category-title-wrapper i {
+            font-size: 1.5rem;
+            color: var(--color-gold);
+        }
+        .category-card-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-text-dark);
+            font-family: var(--font-cairo);
+        }
+        .category-items-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+        .category-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
+        .category-item i {
+            color: var(--color-gold);
+            font-size: 1rem;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .services-hero-section h2 {
+                font-size: 2rem;
+            }
+            .categories-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Islamic Pattern Background Overlay -->
+    <div class="islamic-pattern-overlay"></div>
+    <div class="ambient-glow"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-wrapper" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <h1 style="margin: 0; padding: 0; font-size: inherit; font-weight: inherit; line-height: inherit; display: inline-flex; align-items: center;">
+                    <span class="sr-only" data-i18n="logo_title">مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والإستشارات القانونية</span>
+                    <img id="logo-img" src="logo-dark.png" alt="شعار مكتب المحامي/ الدكتور سعود بن فهد الدريميح للمحاماة والإستشارات القانونية" style="height: 45px; width: auto; object-fit: contain; display: block; transition: var(--transition-premium);">
+                </h1>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-i18n="nav_home">الرئيسية</a>
+                <a href="index.html#about" class="nav-link" data-i18n="nav_about">عن المكتب</a>
+                <a href="services.html" class="nav-link active" data-i18n="nav_services">خدماتنا</a>
+                <a href="blog.html" class="nav-link" data-i18n="nav_blog">المدونة</a>
+                <a href="contact.html" class="nav-link" data-i18n="nav_contact">اتصل بنا</a>
+            </nav>
+
+            <div class="header-ctas">
+                <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="lang-toggle-btn" class="lang-toggle-btn" aria-label="Toggle language">
+                    <span>EN</span>
+                </button>
+                <a href="contact.html" class="btn btn-primary">
+                    <span data-i18n="btn_consultation">طلب استشارة</span>
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Side Menu Panel -->
+    <div id="mobile-menu-panel" class="mobile-menu-panel glass-panel">
+        <div class="mobile-menu-header">
+            <span class="gold-symbol">⚖</span>
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu-nav">
+            <a href="index.html" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_home">الرئيسية</a>
+            <a href="index.html#about" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_about">عن المكتب</a>
+            <a href="services.html" class="mobile-menu-link active" onclick="toggleMobileMenu()" data-i18n="nav_services">خدماتنا</a>
+            <a href="blog.html" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_blog">المدونة</a>
+            <a href="contact.html" class="mobile-menu-link" onclick="toggleMobileMenu()" data-i18n="nav_contact">اتصل بنا</a>
+        </nav>
+    </div>
+
+    <!-- Main Container -->
+    <main class="services-page-wrapper">
+        <!-- 3D Canvas Fallback overlay scales -->
+        <div id="three-fallback" class="fallback-hidden" style="display:none;"></div>
+        
+        <div class="services-hero-section">
+            <div class="badge-premium small">
+                <span data-i18n="services_badge">مجالات الاختصاص</span>
+            </div>
+            <h2 class="section-heading amiri-font">
+                <span data-i18n="services_title_1">خدماتنا </span>
+                <span class="text-gold" data-i18n="services_title_2">القانونية</span>
+                <span data-i18n="services_title_3"> المتميزة</span>
+            </h2>
+            <p data-i18n="services_hero_desc">نقدم حلولاً قانونية واستراتيجية متكاملة لقطاع الأعمال والمنشآت التجارية، كما نوفر دعماً قانونياً شاملاً للأفراد ونزاعات التقاضي والتحكيم والتوثيق لحماية مكتسباتكم وضمان أمان معاملاتكم.</p>
+        </div>
+
+        <!-- 12 Main Services Grid -->
+        <div class="services-cards-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; width: 100%;">
+            <!-- Service 1: Integrated Legal Administration -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-building-shield"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_1_title">الإدارة القانونية المتكاملة</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_1_desc">
+                    تقدم دعماً قانونياً دائماً للشركات والمنشآت من خلال إدارة قانونية شاملة تشمل الاستشارات، العقود، السياسات، الامتثال، وتمثيل الشركة قانونياً، بما يضمن استقرارها وحمايتها من المخاطر.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_1_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 2: Litigation & Arbitration -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_2_title">التمثيل القضائي والتحكيم</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_2_desc">
+                    تقدم تمثيلاً قانونياً شاملاً أمام المحاكم والجهات القضائية. وندير قضايا التحكيم والنزاعات التجارية باحترافية تامة، لضمان حماية حقوق العميل وتسريع مسار الفصل.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_2_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 3: Contracts & Agreements -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-file-signature"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_3_title">صياغة ومراجعة العقود والاتفاقيات</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_3_desc">
+                    تعد وتراجع العقود بجميع أنواعها لضمان وضوح الالتزامات وحماية الحقوق، وتصيغ الاتفاقيات بطريقة دقيقة تقلل النزاعات وتعزز القوة التفاوضية للعميل.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_3_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 4: Debt Collection & Deeds -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_4_title">تحصيل الديون وتنفيذ السندات</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_4_desc">
+                    تقدم خدمة احترافية لتنفيذ الأحكام والسندات التنفيذية مثل الشيكات والسندات لأمر والكمبيالات، وتتولى إدارة ملفات التحصيل المتعثر حتى استرجاع المبالغ المستحقة.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_4_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 5: Family Business & Wealth -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_5_title">تنظيم الثروات والشركات العائلية</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_5_desc">
+                    تنظم العلاقة بين الشركاء والورثة في الكيانات العائلية. وتعد مواثيق الحوكمة واتفاقيات الإدارة والتوريث، لضمان استمرارية النشاط ومنع النزاعات المستقبلية.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_5_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 6: Company Registration & Liquidation -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_6_title">تأسيس وتصفية الشركات والكيانات</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_6_desc">
+                    تؤسس الشركات والكيانات النظامية بكافة أنواعها. وتدير تصفيتها عند الحاجة بطريقة قانونية منظمة تشمل التوثيق، الحصر، وإنهاء العلاقة مع الجهات الرسمية.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_6_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 7: Judicial Receivership -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_7_title">الحراسة القضائية</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_7_desc">
+                    تتولى الحراسة القضائية على الأموال أو الشركات أو العقارات محل النزاع بناء على أوامر قضائية، وتديرها بطريقة محايدة ومنظمة تضمن الحفاظ على الحقوق وسلامة الأصل حتى انتهاء الخلاف.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_7_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 8: Policy & Compliance -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_8_title">إعداد السياسات واللوائح الداخلية والامتثال</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_8_desc">
+                    تعد السياسات واللوائح الداخلية للمنشآت بمهنية عالية. وتنظم العلاقة بين الإدارات والموظفين، وتعزز الامتثال للأنظمة السعودية والحوكمة المؤسسية.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_8_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 9: Specialized Consultations -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-gavel"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_9_title">الاستشارات القانونية المتخصصة</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_9_desc">
+                    تقدم استشارات قانونية دقيقة في مختلف الأنظمة. تشمل مراجعة القرارات، تحليل العقود، وتفسير الأنظمة، بهدف تمكين العميل من اتخاذ قرارات نظامية مدروسة.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_9_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 10: Corporate Secretary -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_10_title">أمانة السر ومجلس الإدارة</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_10_desc">
+                    تقدم خدمة أمانة السر لمجالس الإدارة بالشركات، بما في ذلك إعداد المحاضر، ومتابعة التنفيذ وضمان التوثيق الكامل والالتزام النظامي للمجلس.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_10_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 11: Boardroom Support -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_11_title">دعم الشركات داخل مجلس الإدارة</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_11_desc">
+                    تقدم خدمة دعم الشركات داخل مجلس الإدارة، بما في ذلك الإرشاد والنصح، والإدارة النظامية بما يضمن استقرارها واستمرارية عملها.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_11_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+
+            <!-- Service 12: IPO Support -->
+            <div class="service-card glass-panel" style="padding: 2.5rem 2rem; border-radius: 20px; transition: var(--transition-premium); position: relative; overflow: hidden; display: flex; flex-direction: column; gap: 1.2rem; min-height: 320px; border: 1px solid rgba(255, 255, 255, 0.15); background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);">
+                <div class="service-icon" style="width: 60px; height: 60px; border-radius: 15px; background: rgba(68, 112, 75, 0.1); border: 2px solid var(--color-green); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: var(--color-green);">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h3 class="service-title" style="font-size: 1.4rem; font-weight: 800; color: var(--color-text-dark); margin: 0; font-family: var(--font-cairo);" data-i18n="service_12_title">دعم الشركات للإدراج في السوق المالية</h3>
+                <p class="service-desc" style="font-size: 0.95rem; color: var(--color-text-light); line-height: 1.7; margin: 0; flex-grow: 1;" data-i18n="service_12_desc">
+                    تقدم خدمة دعم الشركات للإدراج في السوق المالية الرئيسية (تداول) أو السوق الموازية (نمو)، بما في ذلك التأهل القانوني والإداري لضمان استيفاء شروط الهيئة والسوق.
+                </p>
+                <a href="contact.html" class="btn-text-gold" style="display: flex; align-items: center; gap: 6px; font-weight: 700; color: var(--color-gold); text-decoration: none; font-size: 0.9rem;">
+                    <span data-i18n="service_12_cta">اقرأ المزيد</span>
+                    <i class="fa-solid fa-arrow-left" style="font-size: 0.8rem;"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section 3: Detailed Service Categories -->
+        <section class="categories-section">
+            <div class="services-hero-section" style="margin-bottom: 3rem;">
+                <div class="badge-premium small">
+                    <span data-i18n="services_badge">تصنيف الخدمات</span>
+                </div>
+                <h3 class="section-heading amiri-font" style="font-size: 2rem; color: var(--color-gold); margin-top: 0.5rem;" data-i18n="services_details_title">تفاصيل الاختصاص والخدمات الفرعية</h3>
+            </div>
+
+            <div class="categories-grid">
+                <!-- Category 1: Corporate -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-building"></i>
+                        <h4 class="category-card-title" data-i18n="cat_corporate_title">خدمات الشركات</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item1">تأسيس الشركات وتعديل عقود التأسيس.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item2">الحوكمة والامتثال.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item3">صياغة ومراجعة العقود والاتفاقيات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item4">الاندماج والاستحواذ.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item5">إعادة الهيكلة القانونية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item6">تصفية الشركات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item7">تحصيل الديون التجارية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_corporate_item8">خدمات أمانة سر الشركات.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 2: Litigation -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-gavel"></i>
+                        <h4 class="category-card-title" data-i18n="cat_litigation_title">التقاضي وتسوية المنازعات</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item1">الترافع أمام جميع المحاكم.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item2">المنازعات التجارية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item3">المنازعات المدنية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item4">المنازعات العمالية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item5">المنازعات الإدارية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item6">التنفيذ وإجراءات التحصيل.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item7">التحكيم.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_litigation_item8">الوساطة والتسويات الودية.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 3: Legal Consultations -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <h4 class="category-card-title" data-i18n="cat_consultation_title">الاستشارات القانونية</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_consultation_item1">الاستشارات القانونية الفورية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_consultation_item2">إعداد المذكرات والرأي القانوني.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_consultation_item3">دراسة المخاطر القانونية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_consultation_item4">التفسير النظامي للوائح والأنظمة.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_consultation_item5">الدعم القانوني المستمر للشركات.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 4: Contracts -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-file-signature"></i>
+                        <h4 class="category-card-title" data-i18n="cat_contracts_title">العقود</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item1">صياغة العقود.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item2">مراجعة العقود.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item3">التفاوض على العقود.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item4">عقود المقاولات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item5">عقود الشراكة والاستثمار.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item6">عقود العمل.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracts_item7">عقود التوريد والتشغيل والصيانة.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 5: Intellectual Property -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-copyright"></i>
+                        <h4 class="category-card-title" data-i18n="cat_ip_title">خدمات الملكية الفكرية</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_ip_item1">تسجيل العلامات التجارية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_ip_item2">حماية حقوق المؤلف.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_ip_item3">براءات الاختراع.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_ip_item4">نقل وترخيص الحقوق.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_ip_item5">الاعتراضات والنزاعات.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 6: Individuals -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-user-large"></i>
+                        <h4 class="category-card-title" data-i18n="cat_individuals_title">خدمات الأفراد</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item1">القضايا المدنية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item2">القضايا التجارية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item3">قضايا الأحوال الشخصية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item4">قضايا الميراث والتركات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item5">المطالبات المالية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item6">التعويضات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_individuals_item7">تنفيذ الأحكام.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 7: Investors & Entrepreneurs -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h4 class="category-card-title" data-i18n="cat_investors_title">خدمات المستثمرين ورواد الأعمال</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_investors_item1">تأسيس المشاريع.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_investors_item2">اختيار الكيان القانوني.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_investors_item3">اتفاقيات الشركاء.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_investors_item4">الجولات الاستثمارية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_investors_item5">الامتثال النظامي.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_investors_item6">حماية الأصول.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 8: Contracting & Projects -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                        <h4 class="category-card-title" data-i18n="cat_contracting_title">خدمات المقاولات والمشاريع</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item1">عقود المقاولات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item2">المطالبات المالية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item3">أوامر التغيير.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item4">تمديد مدد المشاريع.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item5">مطالبات التأخير.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item6">فض المنازعات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item7">التسويات الودية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item8">إدارة المطالبات التعاقدية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item9">مراجعة المستخلصات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_contracting_item10">تحليل المخاطر التعاقدية.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 9: Execution -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <h4 class="category-card-title" data-i18n="cat_execution_title">خدمات التنفيذ</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_execution_item1">تنفيذ الأحكام.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_execution_item2">تنفيذ السندات التنفيذية.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_execution_item3">تحصيل الديون.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_execution_item4">متابعة إجراءات التنفيذ.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_execution_item5">إيقاف التنفيذ والاعتراضات.</span></li>
+                    </ul>
+                </div>
+
+                <!-- Category 10: Notarization -->
+                <div class="category-card glass-panel">
+                    <div class="category-title-wrapper">
+                        <i class="fa-solid fa-file-contract"></i>
+                        <h4 class="category-card-title" data-i18n="cat_documentation_title">خدمات التوثيق</h4>
+                    </div>
+                    <ul class="category-items-list">
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_documentation_item1">إعداد العقود والاتفاقيات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_documentation_item2">الإقرارات والتعهدات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_documentation_item3">الوكالات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_documentation_item4">محاضر الاجتماعات.</span></li>
+                        <li class="category-item"><i class="fa-solid fa-circle-check"></i><span data-i18n="cat_documentation_item5">توثيق الشركات.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="sub-footer" style="margin-top: 6rem; padding-bottom: 2rem; border-top: 1px solid rgba(68, 112, 75, 0.08);">
+            <p>© ٢٠٢٦ مكتب الدكتور سعود بن فهد الدريميح للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.</p>
+        </footer>
+    </main>
+
+    <!-- Mobile Bottom Navigation Bar -->
+    <nav class="mobile-bottom-nav">
+        <a href="index.html" class="mobile-bottom-nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>الرئيسية</span>
+        </a>
+        <a href="services.html" class="mobile-bottom-nav-item active">
+            <i class="fa-solid fa-briefcase"></i>
+            <span>الخدمات</span>
+        </a>
+        <a href="contact.html" class="mobile-bottom-nav-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>اتصل بنا</span>
+        </a>
+    </nav>
+
+    <!-- Floating Phone Button -->
+    <a href="tel:+966500000000" class="phone-float" aria-label="Phone Call Contact">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/966500000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%20%D9%88%D8%B1%D8%AD%D9%85%D8%A9%20%D8%A7%D9%84%D9%84%D9%87%20%D9%88%D8%A8%D8%B1%D9%83%D8%A7%D8%AA%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D8%A7%D8%B3%D8%AA%D8%B4%D8%A7%D8%B1%D8%A9%20%D9%82%D8%A7%D9%86%D9%88%D9%86%D9%8A%D8%A9" class="whatsapp-float" target="_blank" aria-label="WhatsApp Contact">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="config.js" defer></script>
+    <script src="consultation-api.js" defer></script>
+    <script src="translations.js?v=13" defer></script>
+    <script src="app.js?v=13" defer></script>
+</body>
+</html>
