@@ -2,9 +2,14 @@ import { PrismaClient } from '@prisma/client';
 import dotenv from 'dotenv';
 import path from 'path';
 
-// Ensure environment variables are loaded dynamically from working directory
-dotenv.config({ path: path.resolve(process.cwd(), '.env'), override: true });
-dotenv.config({ path: path.resolve(process.cwd(), 'backend/.env'), override: true });
+// Single source of truth environment resolution
+const envPath = path.resolve(__dirname, '../../../.env');
+dotenv.config({ path: envPath });
+
+// Safely log DATABASE_URL for runtime diagnosis without leaking credentials
+if (process.env.DATABASE_URL) {
+    console.log('[DB] Connecting using DATABASE_URL:', process.env.DATABASE_URL.replace(/:.+@/, ':****@'));
+}
 
 const prisma = new PrismaClient();
 
