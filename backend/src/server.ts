@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 // Load environment variables before importing other modules
-dotenv.config();
+dotenv.config({ override: true });
 
 import express, { Request, Response, NextFunction } from 'express';
 import path from 'path';
