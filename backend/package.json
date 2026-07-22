@@ -5,14 +5,15 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "ts-node src/server.ts",
-    "build": "tsc",
+    "postinstall": "prisma generate --schema=../prisma/schema.prisma",
+    "build": "prisma generate --schema=../prisma/schema.prisma && tsc",
     "start": "node dist/server.js",
-    "prisma:generate": "prisma generate",
-    "prisma:migrate": "prisma migrate dev",
+    "prisma:generate": "prisma generate --schema=../prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema=../prisma/schema.prisma",
     "prisma:seed": "node scripts/run-seed.js"
   },
   "dependencies": {
-    "@prisma/client": "^5.14.0",
+    "@prisma/client": "^5.22.0",
     "@types/bcryptjs": "^2.4.6",
     "@types/compression": "^1.7.5",
     "@types/cors": "^2.8.17",
@@ -33,7 +34,7 @@
     "multer": "^1.4.5-lts.1",
     "node-cron": "^3.0.3",
     "nodemailer": "^6.9.13",
-    "prisma": "^5.14.0",
+    "prisma": "^5.22.0",
     "sharp": "^0.33.3",
     "socket.io": "^4.7.5",
     "ts-node": "^10.9.2",
