@@ -7,8 +7,10 @@ const envPath = path.resolve(__dirname, '../../../.env');
 dotenv.config({ path: envPath });
 
 // Safely log DATABASE_URL for runtime diagnosis without leaking credentials
-if (process.env.DATABASE_URL) {
-    console.log('[DB] Connecting using DATABASE_URL:', process.env.DATABASE_URL.replace(/:.+@/, ':****@'));
+const dbUrl = process.env.DATABASE_URL;
+if (dbUrl) {
+    const safeUrl = dbUrl.replace(/mysql:\/\/([^:]+):([^@]+)@/, 'mysql://$1:****@');
+    console.log('[DB] Database configured:', safeUrl);
 }
 
 const prisma = new PrismaClient();
